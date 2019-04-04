@@ -1,5 +1,5 @@
 (ns rest-api.core
-  (:require [rest-api.views :as views]
+  (:require [rest-api.views.views :as views]
             [compojure.core :refer :all]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]

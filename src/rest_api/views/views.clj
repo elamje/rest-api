@@ -1,4 +1,4 @@
-(ns rest-api.views
+(ns rest-api.views.views
   (:require [hiccup.page :as page]
             [ring.util.anti-forgery :as util]))
 
@@ -11,7 +11,7 @@
   []
   (page/html5
    (generate-header "CV")
-   [:h1 "Custom View CV"]
+   [:h1 "CV"]
    [:a {:href "/"} "HOME" ]
    [:br]
    [:p "here we want a dynamic list of data"]))

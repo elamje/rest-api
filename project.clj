@@ -10,7 +10,7 @@
                  [ring/ring-jetty-adapter "1.4.0"]
                  [hiccup "1.0.5"]]
   :plugins [[lein-ring "0.12.5"]]
-  :ring {:handler rest-api.handler/app}
+  :ring {:handler rest-api.core/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.2"]]}})
