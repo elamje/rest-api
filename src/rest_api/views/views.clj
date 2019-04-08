@@ -22,4 +22,11 @@
                [:h1 "HOME"]
                [:a {:href "/cv"} "CV"]
                [:br]
-               [:p "here we want to display a hyperlink to the data models in our db"]))
+               [:p "Don't forget to run postgres -D pg & before working with the db"]))
+
+(defn four-oh-four
+  []
+  (base-layout "Page Not Found"
+               [:div {:id "four-oh-four"}
+                "The page you requested could not be found"]))
+

@@ -17,8 +17,4 @@
       [:h1 {:class "container"} "API"]]
      [:div {:id "content" :class "container"} body]]]))
 
-(defn four-oh-four
-  []
-  (base-layout "Page Not Found"
-               [:div {:id "four-oh-four"}
-                "The page you requested could not be found"]))
+

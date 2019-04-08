@@ -1,7 +1,6 @@
 (ns rest-api.models.migration
   (:require [clojure.java.jdbc :as sql]
-            [rest-api.models.dep :as dep]
-            ))
+            [rest-api.models.dep :as dep]))
 
 (defn migrated? 
   "Check if db is migrated"
