@@ -1,6 +1,7 @@
 (ns rest-api.views.views
   (:require [hiccup.page :as page]
-            [ring.util.anti-forgery :as util]))
+            [ring.util.anti-forgery :as util]
+            [rest-api.views.layout :refer [base-layout]]))
 
 (defn generate-header
   [title]
@@ -9,18 +10,16 @@
 
 (defn cv
   []
-  (page/html5
-   (generate-header "CV")
-   [:h1 "CV"]
-   [:a {:href "/"} "HOME" ]
-   [:br]
-   [:p "here we want a dynamic list of data"]))
+  (base-layout "CV"
+               [:h1 "CV"]
+               [:a {:href "/"} "HOME" ]
+               [:br]
+               [:p "here we want a dynamic list of data"]))
 
 (defn home
   []
-  (page/html5
-   (generate-header "HOME")
-   [:h1 "HOME"]
-   [:a {:href "/cv"} "CV"]
-   [:br]
-   [:p "here we want to display a hyperlink to the data models in our db"]))
+  (base-layout "HOME"
+               [:h1 "HOME"]
+               [:a {:href "/cv"} "CV"]
+               [:br]
+               [:p "here we want to display a hyperlink to the data models in our db"]))
